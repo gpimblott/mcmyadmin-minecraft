@@ -15,11 +15,13 @@ To pull directly onto your Docker host use the following command:
 
 # Create your first server
 
+Minecraft containers are created using the following command
+`docker run -p {AdminPort}:8080 -p {MinecraftPort}:25565 -i -t -d --name {ContainerName} gpimblott/minecraft`
+
+Example:
  `docker run -p 8080:8080 -p 25565:25565 -i -t -d --name myfirstserver gpimblott/minecraft`
 
-# Create a second server - note the port changes
-
-Note the increment of the admin and minecraft server ports
+Create a second server , note the increment of the admin and minecraft server ports
 
  `docker run -p 8081:8080 -p 25566:25565 -i -t -d --name mysecondserver gpimblott/minecraft`
 
