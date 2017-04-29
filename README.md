@@ -19,7 +19,9 @@ To pull directly onto your Docker host use the following command:
 
 # Create a second server - note the port changes
 
- `docker run -p 8081:8080 -p 25566:25565 -i -t -d --name myfirstserver gpimblott/minecraft`
+Note the increment of the admin and minecraft server ports
+
+ `docker run -p 8081:8080 -p 25566:25565 -i -t -d --name mysecondserver gpimblott/minecraft`
 
 # Configuring the server
 Once created log into the web console for McMyAdmin.
