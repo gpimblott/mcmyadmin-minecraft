@@ -1,4 +1,4 @@
-FROM java:7u65
+FROM java:8u111-jre
 MAINTAINER Gordon Pimblott "gordon@pimblott.com"
 
 # Update system
