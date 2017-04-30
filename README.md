@@ -16,15 +16,15 @@ To pull directly onto your Docker host use the following command:
 # Create your first server
 
 Minecraft containers are created using the following command
-<br>
-`docker run -p {AdminPort}:8080 -p {MinecraftPort}:25565 -i -t -d --name {ContainerName} gpimblott/minecraft`
+
+`docker run -p {AdminPort}:8080 -p {MinecraftPort}:25565 -i -t -d --name {ContainerName} gpimblott/mcmyadmin-minecraft`
 
 Example:
- `docker run -p 8080:8080 -p 25565:25565 -i -t -d --name myfirstserver gpimblott/minecraft`
+ `docker run -p 8080:8080 -p 25565:25565 -i -t -d --name myfirstserver gpimblott/mcmyadmin-minecraft`
 
 Create a second server , note the increment of the admin and minecraft server ports
 
- `docker run -p 8081:8080 -p 25566:25565 -i -t -d --name mysecondserver gpimblott/minecraft`
+ `docker run -p 8081:8080 -p 25566:25565 -i -t -d --name mysecondserver gpimblott/mcmyadmin-minecraft`
 
 # Configuring the server
 Once created log into the web console for McMyAdmin.
@@ -42,7 +42,7 @@ The servers can then be stopped and started as needed.
 
 Copy the worlds into a directory on your Docker host. Then use the command below to create a container for a specific world:
 
-`docker run -p {admin port to export}:8080 -p {minecraft server port to expose}:25565 -v {absolute path of world on host}/:/home/minecraft/mcmyadmin/Minecraft/world -i -t -d --name myfirstserver gpimblott/minecraft`
+`docker run -p {admin port to export}:8080 -p {minecraft server port to expose}:25565 -v {absolute path of world on host}/:/home/minecraft/mcmyadmin/Minecraft/world -i -t -d --name myfirstserver gpimblott/mcmyadmin-minecraft`
 
 
 It's a great way to keep multiple Minecraft worlds on the go for the family ;)
